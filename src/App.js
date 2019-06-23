@@ -33,11 +33,10 @@ function App() {
         <SearchInput search={handleSearch} />
         <div className="pokemonscontainer">
           {pokemons.length < 1
-            ? <p>No pokemon captured yet!</p>
+            ? <p data-testid="stateZero">No pokemon captured yet!</p>
             : pokemons.map(p => <Pokemon {...p} />)
           }
         </div>
-        
       </div>
     </div>
   );
